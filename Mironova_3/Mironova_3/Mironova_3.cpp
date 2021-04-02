@@ -5,7 +5,7 @@
 
 using namespace std;
 
-double findSquare(double x, double  y, double z)
+double findSquare(double x, double y, double z)
 {
 	double p = (x + y + z) / 2;
 	double square = sqrt(p * (p - x) * (p - y) * (p - z));
@@ -26,6 +26,5 @@ int main()
 	cin >> g;
 
 	double square = findSquare(a, b, f) + findSquare(f, g, c) + findSquare(d, e, g);
-	cout << square;
+	cout << square << endl;
 }
-
