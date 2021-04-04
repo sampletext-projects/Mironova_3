@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <stdio.h>
 #include <math.h>
 
 
@@ -16,15 +15,31 @@ int main()
 {
 	setlocale(0, "Russian");
 	double a, b, c, d, e, f, g;
-	cout << "Введите a,b,c,d,e,f,g соответственно:" << endl;
+	cout << "Введите a: ";
 	cin >> a;
+	cout << "Введите b: ";
 	cin >> b;
+	cout << "Введите c: ";
 	cin >> c;
+	cout << "Введите d: ";
 	cin >> d;
+	cout << "Введите e: ";
 	cin >> e;
+	cout << "Введите f: ";
 	cin >> f;
+	cout << "Введите g: ";
 	cin >> g;
 
-	double square = findSquare(a, b, f) + findSquare(f, g, c) + findSquare(d, e, g);
-	cout << square << endl;
+	double square1 = findSquare(a, b, f);
+	double square2 = findSquare(f, g, c);
+	double square3 = findSquare(d, e, g);
+
+	cout << "Площадь треугольника a-b-f: " << square1 << endl;
+	cout << "Площадь треугольника f-g-c: " << square2 << endl;
+	cout << "Площадь треугольника d-e-g: " << square3 << endl;
+
+	double square = square1 + square2 + square3;
+	cout << "Суммарная площадь фигуры: " << square << endl;
+
+	return 0;
 }
